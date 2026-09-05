@@ -230,18 +230,15 @@
                 url: window.location.href
             };
 
-            // 優先嘗試調用手機原生分享面板（支援手機直接選 Instagram 等 App）
             if (navigator.share) {
                 try {
                     await navigator.share(shareData);
                     return;
                 } catch (err) {
-                    // 用戶取消分享或不支援時，fallback 到複製連結
                     console.log('User cancelled or share failed', err);
                 }
             }
 
-            // Fallback: 複製連結並提示
             navigator.clipboard.writeText(window.location.href).then(() => {
                 alert('給你給你！copy吧！知道你喜歡share！ 💛');
             }).catch(err => {
