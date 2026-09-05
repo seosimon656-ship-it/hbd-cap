@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生日興奮啊，Honey 💛</title>
+    <title>生日興奮啊，Honey💛</title>
+    
+    <!-- Favicon 小圖示 -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- 引入網頁端英文字型 -->
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Caveat:wght@500;700&family=Noto+Serif+TC:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
-        
         @font-face {
             font-family: 'CustomChineseFont';
             src: url('DFWaWa-Md-HK-BF-01.ttf') format('truetype');
@@ -34,7 +37,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'CustomChineseFont', 'Noto Serif TC', 'Indie Flower', serif;
+            font-family: 'CustomChineseFont', 'Noto Serif TC', serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -61,7 +64,6 @@
             transform: rotate(0deg);
         }
 
-        /* 放大版復古郵票 */
         .stamp-area {
             position: absolute;
             top: 35px;
@@ -88,7 +90,6 @@
         }
 
         header h1 {
-            /* 換成 Caveat 手寫字體 */
             font-family: 'Caveat', cursive;
             font-size: 3rem;
             font-weight: 700;
@@ -106,10 +107,10 @@
         }
 
         .message-body {
-            /* 內文維持可愛手寫感 */
-            font-family: 'Caveat', cursive;
-            font-size: 1.75rem;
-            line-height: 1.6;
+            /* 內文全面換成你的自訂繁體中文字型，並拉大字體讓娃娃體更好看 */
+            font-family: 'CustomChineseFont', 'Caveat', cursive;
+            font-size: 1.6rem;
+            line-height: 1.7;
             color: #333333;
             margin-bottom: 40px;
             padding-right: 50px;
@@ -128,6 +129,12 @@
             padding-top: 20px;
         }
 
+        .from-area {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
         .from-tag {
             font-family: 'Indie Flower', cursive;
             font-size: 1rem;
@@ -135,10 +142,33 @@
             letter-spacing: 1px;
         }
 
+        .ig-share-btn {
+            background-color: #fff3ec;
+            border: 1px solid #f4a261;
+            color: #e76f51;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: 'CustomChineseFont', sans-serif;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .ig-share-btn:hover {
+            background-color: #e76f51;
+            color: #ffffff;
+        }
+
         .signature {
             font-family: 'Caveat', cursive;
             font-size: 2rem;
             color: var(--accent-orange);
+            text-align: right;
         }
 
         @media (max-width: 600px) {
@@ -155,7 +185,7 @@
                 font-size: 2.3rem;
             }
             .message-body {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 padding-right: 0;
             }
         }
@@ -171,7 +201,7 @@
         </div>
 
         <header>
-            <h1>Excited Birthday, Honey💛</h1>
+            <h1>Happy Birthday, Honey.</h1>
             <div class="subtitle">給老是毛毛躁躁的 Cap</div>
         </header>
 
@@ -179,15 +209,30 @@
             喂，講真的，沒想到追星的路上會突然撿到你這麼個寶藏朋友。<br>
             慶幸這個世界上還有像你這樣的人，讓我依然覺得世界其實還蠻美好的。<br><br>
             雖然你平時毛毛躁躁又愛害羞，但其實細心又<span class="highlight-word">溫暖</span>，重點是還非常好逗、好玩 😆<br>
-            希望你可以繼續做你自己想做的事。不管過得開不開心、踩到什麼坑，需要我的時候，我盡量在啦！<br><br>
+            希望你繼續做你自己想做的事。不管過得開不開心、踩到什麼坑，需要我的時候，我盡量在啦！<br><br>
             生日興奮啦，今天記得吃好一點！睡好一點！💛
         </div>
 
         <div class="footer-note">
-            <div class="from-tag">SPECIAL DELIVERY · TODAY</div>
+            <div class="from-area">
+                <div class="from-tag">SPECIAL DELIVERY · TODAY</div>
+                <button class="ig-share-btn" onclick="copyCardLink()">
+                    <span>✨ Share</span>
+                </button>
+            </div>
             <div class="signature">coffeemiao</div>
         </div>
     </div>
+
+    <script>
+        function copyCardLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('網址已複製！快去 IG Story 貼上跟大家分享吧 💛');
+            }).catch(err => {
+                console.error('複製失敗', err);
+            });
+        }
+    </script>
 
 </body>
 </html>
