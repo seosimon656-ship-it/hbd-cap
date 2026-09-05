@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Cap 💛</title>
-    <!-- Google Fonts for warm, analog handwriting feel -->
+    <title>生日興奮, Honey 💛</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -52,27 +51,24 @@
             transform: rotate(0deg);
         }
 
-        /* Stamp accent */
+        /* Stamp image area */
         .stamp-area {
             position: absolute;
             top: 35px;
             right: 40px;
-            width: 70px;
-            height: 85px;
-            border: 2px dashed var(--accent-yellow);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #fefae0;
+            width: 75px;
+            height: 90px;
+            border: 2px solid #f0e6dc;
+            padding: 4px;
+            background: #ffffff;
             transform: rotate(3deg);
-            font-family: 'Caveat', cursive;
-            color: var(--accent-orange);
-            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        .stamp-area span {
-            font-size: 24px;
+        .stamp-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         header h1 {
@@ -95,10 +91,10 @@
         .message-body {
             font-family: 'Caveat', cursive;
             font-size: 1.8rem;
-            line-height: 1.5;
+            line-height: 1.6;
             color: #333333;
             margin-bottom: 40px;
-            padding-right: 40px;
+            padding-right: 50px;
         }
 
         .highlight-word {
@@ -133,8 +129,8 @@
             .stamp-area {
                 top: 25px;
                 right: 25px;
-                width: 55px;
-                height: 70px;
+                width: 60px;
+                height: 75px;
             }
             header h1 {
                 font-size: 1.8rem;
@@ -150,24 +146,23 @@
 
     <div class="postcard-container">
         <div class="stamp-area">
-            <span>🍊</span>
-            <span>CAP</span>
+            <img src="cute-honey.png" alt="Cap's Stamp">
         </div>
 
         <header>
-            <h1>Happy Birthday, Cap.</h1>
-            <div class="subtitle">A little warmth for your special day</div>
+            <h1>生日興奮, Honey.</h1>
+            <div class="subtitle">致充滿溫暖的你</div>
         </header>
 
         <div class="message-body">
-            To our dearest Cap,<br>
-            You always bring such <span class="highlight-word">warmth</span> and thoughtful little rituals into the world, just like a soft sunset gradient of <span class="highlight-word">yellow and orange</span>.<br><br>
-            May this year bring you as much quiet joy, beautiful memories, and bright moments as you effortlessly share with everyone around you. Have the coziest day today! 💛
+            給溫暖的 Cap，<br>
+            你總是用心地把生活過成一首詩，把 <span class="highlight-word">溫暖</span> 和許多美好的儀式感帶進我們身邊，就像一抹溫柔的 <span class="highlight-word">黃與橙色</span> 夕陽。<br><br>
+            願這新的一年裡，也能擁有滿滿的平靜喜悅、閃閃發光的溫柔回憶，就像你一直以來帶給身邊人的那樣。今天一定要過得最舒服、最開心喔！ 💛
         </div>
 
         <div class="footer-note">
             <div class="from-tag">SPECIAL DELIVERY · TODAY</div>
-            <div class="signature">With love.</div>
+            <div class="signature">from coffeemiao</div>
         </div>
     </div>
 
