@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>生日興奮啊，Honey 💛</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Caveat:wght@500;700&family=Noto+Serif+TC:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #fcf9f5;
@@ -24,7 +25,8 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* 中文優先使用高質感思源宋體，英文搭配 Indie Flower 與 Caveat */
+            font-family: 'Noto Serif TC', 'Indie Flower', serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -51,7 +53,7 @@
             transform: rotate(0deg);
         }
 
-        /* Stamp image area - 放大版郵票 */
+        /* 放大版復古郵票 */
         .stamp-area {
             position: absolute;
             top: 35px;
@@ -87,7 +89,8 @@
         }
 
         .subtitle {
-            font-size: 0.95rem;
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.1rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -95,8 +98,9 @@
         }
 
         .message-body {
+            /* 內文全面換成可愛又好讀的手寫感 */
             font-family: 'Caveat', cursive;
-            font-size: 1.7rem;
+            font-size: 1.75rem;
             line-height: 1.6;
             color: #333333;
             margin-bottom: 40px;
@@ -117,7 +121,8 @@
         }
 
         .from-tag {
-            font-size: 0.85rem;
+            font-family: 'Indie Flower', cursive;
+            font-size: 1rem;
             color: var(--text-muted);
             letter-spacing: 1px;
         }
@@ -142,7 +147,7 @@
                 font-size: 1.8rem;
             }
             .message-body {
-                font-size: 1.45rem;
+                font-size: 1.5rem;
                 padding-right: 0;
             }
         }
@@ -151,9 +156,9 @@
 <body>
 
     <div class="postcard-container">
-        <div class="stamp-area" title="點擊或長按可儲存圖片">
+        <div class="stamp-area" title="天氣熱就會生氣的CAP">
             <a href="cute-honey.png" target="_blank">
-                <img src="cute-honey.png" alt="Cap's Stamp">
+                <img src="cute-honey.png" alt="天氣熱就會生氣的CAP">
             </a>
         </div>
 
@@ -166,7 +171,7 @@
             喂，講真的，沒想到追星的路上會突然撿到你這麼個寶藏朋友。<br>
             慶幸這世界上還有像你這樣的人，讓我覺得世界其實還蠻美好的。<br><br>
             雖然你平時毛毛躁躁又愛害羞，但其實細心又<span class="highlight-word">溫暖</span>，重點是還非常好逗、好玩 😆<br>
-            新的一年，希望你繼續做你自己想做的事。不管過得開不開心、踩到什麼坑，需要我的時候，我盡量在啦！<br><br>
+            希望你繼續做你自己想做的事。不管過得開不開心、踩到什麼坑，需要我的時候，我盡量在啦！<br><br>
             生日興奮啦，今天記得吃好一點！💛
         </div>
 
