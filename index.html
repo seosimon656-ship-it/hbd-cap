@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Cap 💛</title>
+    <!-- Google Fonts for warm, analog handwriting feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fcf9f5;
+            --card-bg: #fffdf9;
+            --accent-yellow: #f4a261;
+            --accent-orange: #e76f51;
+            --text-main: #2b2b2b;
+            --text-muted: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: radial-gradient(#e9d8c5 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+
+        .postcard-container {
+            width: 100%;
+            max-width: 650px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(231, 111, 81, 0.08), 0 2px 6px rgba(0,0,0,0.04);
+            position: relative;
+            border: 1px solid #f0e6dc;
+            transform: rotate(-0.5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .postcard-container:hover {
+            transform: rotate(0deg);
+        }
+
+        /* Stamp accent */
+        .stamp-area {
+            position: absolute;
+            top: 35px;
+            right: 40px;
+            width: 70px;
+            height: 85px;
+            border: 2px dashed var(--accent-yellow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fefae0;
+            transform: rotate(3deg);
+            font-family: 'Caveat', cursive;
+            color: var(--accent-orange);
+            font-size: 14px;
+        }
+
+        .stamp-area span {
+            font-size: 24px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 35px;
+        }
+
+        .message-body {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            color: #333333;
+            margin-bottom: 40px;
+            padding-right: 40px;
+        }
+
+        .highlight-word {
+            color: var(--accent-orange);
+            border-bottom: 1px dashed var(--accent-yellow);
+        }
+
+        .footer-note {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f0e6dc;
+            padding-top: 20px;
+        }
+
+        .from-tag {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .signature {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: var(--accent-orange);
+        }
+
+        @media (max-width: 600px) {
+            .postcard-container {
+                padding: 25px;
+            }
+            .stamp-area {
+                top: 25px;
+                right: 25px;
+                width: 55px;
+                height: 70px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .message-body {
+                font-size: 1.5rem;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="postcard-container">
+        <div class="stamp-area">
+            <span>🍊</span>
+            <span>CAP</span>
+        </div>
+
+        <header>
+            <h1>Happy Birthday, Cap.</h1>
+            <div class="subtitle">A little warmth for your special day</div>
+        </header>
+
+        <div class="message-body">
+            To our dearest Cap,<br>
+            You always bring such <span class="highlight-word">warmth</span> and thoughtful little rituals into the world, just like a soft sunset gradient of <span class="highlight-word">yellow and orange</span>.<br><br>
+            May this year bring you as much quiet joy, beautiful memories, and bright moments as you effortlessly share with everyone around you. Have the coziest day today! 💛
+        </div>
+
+        <div class="footer-note">
+            <div class="from-tag">SPECIAL DELIVERY · TODAY</div>
+            <div class="signature">With love.</div>
+        </div>
+    </div>
+
+</body>
+</html>
