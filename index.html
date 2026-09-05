@@ -207,15 +207,15 @@
             喂，講真的，沒想到追星的路上會突然撿到你這麼個寶藏朋友。<br>
             慶幸這個世界上還有像你這樣的人，讓我依然覺得世界其實還蠻美好的。<br><br>
             雖然你平時毛毛躁躁又愛害羞，但其實細心又<span class="highlight-word">溫暖</span>，重點是還非常好逗、好玩 😆<br>
-            希望你繼續做你自己想做的事。不管過得開不開心、踩到什麼坑，需要我的時候，我盡量在啦！<br><br>
+            希望你繼續做你想做的事。不管過得開不開心、踩到什麼坑，需要我的時候，我盡量在啦！<br><br>
             生日興奮啦，今天記得吃好一點！睡好一點！💛
         </div>
 
         <div class="footer-note">
             <div class="from-area">
                 <div class="from-tag">SPECIAL DELIVERY · TODAY</div>
-                <button class="ig-share-btn" onclick="copyCardLink()">
-                    <span>✨ Share</span>
+                <button class="ig-share-btn" onclick="shareToIG()">
+                    <span>✨ Share to IG</span>
                 </button>
             </div>
             <div class="signature">coffeemiao</div>
@@ -223,9 +223,27 @@
     </div>
 
     <script>
-        function copyCardLink() {
+        async function shareToIG() {
+            const shareData = {
+                title: '生日興奮啊，Honey💛',
+                text: 'Share爆它！',
+                url: window.location.href
+            };
+
+            // 優先嘗試調用手機原生分享面板（支援手機直接選 Instagram 等 App）
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                    return;
+                } catch (err) {
+                    // 用戶取消分享或不支援時，fallback 到複製連結
+                    console.log('User cancelled or share failed', err);
+                }
+            }
+
+            // Fallback: 複製連結並提示
             navigator.clipboard.writeText(window.location.href).then(() => {
-                alert('網址已複製！快去 IG Story 貼上跟大家分享吧 💛');
+                alert('給你給你！copy吧！知道你喜歡share！ 💛');
             }).catch(err => {
                 console.error('複製失敗', err);
             });
