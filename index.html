@@ -6,7 +6,16 @@
     <title>生日興奮啊，Honey 💛</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Caveat:wght@500;700&family=Noto+Serif+TC:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
     <style>
+        
+        @font-face {
+            font-family: 'CustomChineseFont';
+            src: url('dfwawa.ttc') format('truetype'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+
         :root {
             --bg-color: #fcf9f5;
             --card-bg: #fffdf9;
@@ -25,8 +34,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            /* 中文優先使用高質感思源宋體，英文搭配 Indie Flower 與 Caveat */
-            font-family: 'Noto Serif TC', 'Indie Flower', serif;
+            font-family: 'CustomChineseFont', 'Noto Serif TC', 'Indie Flower', serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -80,25 +88,25 @@
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 600;
+            /* 換成 Caveat 手寫字體 */
+            font-family: 'Caveat', cursive;
+            font-size: 3rem;
+            font-weight: 700;
             color: #2c2c2c;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             letter-spacing: -0.5px;
         }
 
         .subtitle {
-            font-family: 'Indie Flower', cursive;
-            font-size: 1.1rem;
+            font-family: 'CustomChineseFont', 'Indie Flower', cursive;
+            font-size: 1.2rem;
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 35px;
         }
 
         .message-body {
-            /* 內文全面換成可愛又好讀的手寫感 */
+            /* 內文維持可愛手寫感 */
             font-family: 'Caveat', cursive;
             font-size: 1.75rem;
             line-height: 1.6;
@@ -144,7 +152,7 @@
                 height: 95px;
             }
             header h1 {
-                font-size: 1.8rem;
+                font-size: 2.3rem;
             }
             .message-body {
                 font-size: 1.5rem;
@@ -163,7 +171,7 @@
         </div>
 
         <header>
-            <h1>Happy Birthday, Honey.</h1>
+            <h1>Excited Birthday, Honey💛</h1>
             <div class="subtitle">給老是毛毛躁躁的 Cap</div>
         </header>
 
